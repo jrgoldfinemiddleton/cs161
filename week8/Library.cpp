@@ -159,7 +159,7 @@ string Library::requestBook(string pID, string bID) {
   }
 
   // put the book on hold if it wasn't already
-  if (book->getLocation() == ON_SHELF) {
+  if (status == ON_SHELF) {
     book->setLocation(ON_HOLD_SHELF);
   }
   book->setRequestedBy(patron);
